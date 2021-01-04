@@ -1,5 +1,14 @@
-function countOfAllBooleansAndStrings(arr) {
-  // Insert code here;
+function countOfAllBooleansAndStrings(arr) 
+{
+  var count = 0;
+  for (var i = 0; i < arr.length; i++)
+  {
+    if (arr[i] === true || arr[i] === false)
+      count++;
+    else if (arr[i] === 'true' || arr[i] === 'false')
+      count++;
+  }
+  return count;
 }
 
 // Do not edit this line;

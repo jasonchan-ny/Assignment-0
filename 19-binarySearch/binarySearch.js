@@ -3,8 +3,23 @@ class MySolution {
     this.flag = false; // this is optional to use;
   }
 
-  binarySearch(nums, target) {
-    // Insert code here;
+  binarySearch(nums, target) 
+  {
+    var first = 0;
+    var last = nums.length - 1;
+
+    while(first <= last)
+    {
+      var mid = parseInt((first+last)/2)
+
+      if (mid === target)
+        return true;
+      else if (nums[mid] < target)
+        first = mid + 1;
+      else if (nums[mid] > target)
+        last = mid - 1;
+    }
+    return false;
   }
 }
 
